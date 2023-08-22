@@ -13,14 +13,7 @@ To do this, we explore some general queries that will give context clues. we wan
   
 For the first context clue, we come up with the SQL code:  
   
-**SELECT  
-	- Count(*)  
-FROM  
-	- Invoice  
-WHERE  
-	- InvoiceDate >= '2011-01-01'   
-AND  
-	- InvoiceDate <= '2012-12-31'**  
+![Input](1_1Code.jpg)
   
 This counts all data from the invoice table between the dates January 1, 2011, and December 31, 2012, including those dates. The count gives us an output of 167, meaning 167 transactions took place in that time period.  
 
@@ -292,4 +285,10 @@ Robert    Brown	      Jane	Peacock	37.62	5.64
 Roberto  	Almeida	    Jane	Peacock	37.62	5.64
 Puja	    Srivastava  Jane	Peacock	36.64	5.5
 
-We can see that John Doeein looks suspicious because the sales and commission are significant compared to the other customers. Thus, it seems that Jane Peacock is the primary suspect in the financial discrepancy.
+We can see that John Doeein looks suspicious because the sales and commission are significant compared to the other customers. So we want to look into the customer to check their records. To do this we use the code:  
+
+  []
+
+Since the customer has no other records, it seems suspicious so Jane Peacock is the primary suspect in the financial discrepancy.
+
+
