@@ -1,30 +1,30 @@
 # HoK_SQL
 These are my SQL projects and practice.
 
-**PROJECT 1, Data Exploration, SQL: WSDA Music Shop Discrepancy**
+## PROJECT 1, Data Exploration, SQL: WSDA Music Shop Discrepancy
 
-This is a project I worked on to practice my SQL skills. I downloaded the data from the internet and imported it into Excel.
+This is a project I worked on to practice my SQL skills. I downloaded the data from the internet and imported it into Excel.  
 
-The scenario is set that we are working for WSDA Music, and the manager discovers there is a discrepancy in the financials that he has been unable to pinpoint. However, he knows it was between 2011 and 2012. The manager wants me to analyze the data to get a list of suspects, narrow the list, and pinpoint the suspect(s).
+The scenario is set that we are working for WSDA Music, and the manager discovers there is a discrepancy in the financials that he has been unable to pinpoint. However, he knows it was between 2011 and 2012. The manager wants me to analyze the data to get a list of suspects, narrow the list, and pinpoint the suspect(s).  
 
-To do this, we explore some general queries that will give context clues. we want to look for
-**1. How many transactions took place between the years 2011 and 2012?
-2. How much money did WSDA Music make during the same period?**
+To do this, we explore some general queries that will give context clues. we want to look for  
+**1. How many transactions took place between the years 2011 and 2012?  
+2. How much money did WSDA Music make during the same period?**  
+  
+For the first context clue, we come up with the SQL code:  
+  
+**SELECT  
+	Count(*)  
+FROM  
+	Invoice  
+WHERE  
+	InvoiceDate >= '2011-01-01'   
+AND  
+	InvoiceDate <= '2012-12-31'**  
+  
+This counts all data from the invoice table between the dates January 1, 2011, and December 31, 2012, including those dates. The count gives us an output of 167, meaning 167 transactions took place in that time period.  
 
-For the first context clue, we come up with the SQL code:
-
-**SELECT
-	Count(*)
-FROM
-	Invoice
-WHERE
-	InvoiceDate >= '2011-01-01' 
-AND
-	InvoiceDate <= '2012-12-31'**
-
-This counts all data from the invoice table between the dates January 1, 2011, and December 31, 2012, including those dates. The count gives us an output of 167, meaning 167 transactions took place in that time period.
-
-To determine the income between 2011 and 2012, we use the code
+To determine the income between 2011 and 2012, we use the code  
 
 **SELECT
 	sum(total) AS \[Total Income\]
