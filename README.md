@@ -3,7 +3,7 @@ These are my SQL projects and practice.
 
 ## PROJECT 1, Data Exploration, SQL: WSDA Music Shop Discrepancy
 
-This is a project I worked on to practice my SQL skills. I downloaded the data from the internet and imported it into Excel.  
+This is a project I worked on to practice my SQL skills. I downloaded the database from the internet and imported it into SQL. The project and database is locate in the projects folder of my SQL repository.  
 
 The scenario is set that we are working for WSDA Music, and the manager discovers there is a discrepancy in the financials that he has been unable to pinpoint. However, he knows it was between 2011 and 2012. The manager wants me to analyze the data to get a list of suspects, narrow the list, and pinpoint the suspect(s).  
 
