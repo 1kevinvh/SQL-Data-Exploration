@@ -1,9 +1,9 @@
 # HoK_SQL
-These are my SQL projects and practice.
+These are my SQL projects and practice. The database I use is SQLite. To open the file, download the SQL file from the projects folder, open your SQL database, and open the file in that software. I have notes in the projects where my thought processes are, and I have all of the code except the last code I ran commented out. To run the code, highlight the code and hit the run SQL code button, or comment out the currently active code using /* at the beginning of the code and */ at the end of the code. Remove the same symbols from the beginning and end of the code you want to run.
 
 ## PROJECT 1, Data Exploration, SQL: WSDA Music Shop Discrepancy
 
-This is a project I worked on to practice my SQL skills. I downloaded the database from the internet and imported it into SQL. The project and database is locate in the projects folder of my SQL repository.  
+This is a project I worked on to practice my SQL skills. I downloaded the database from the internet and imported it into SQL. The project and database are located in the projects folder of my SQL repository.  
 
 The scenario is set that I am working for WSDA Music, and the manager discovers there is a discrepancy in the financials that he has been unable to pinpoint. However, he knows it was between 2011 and 2012. The manager wants me to analyze the data to get a list of suspects, narrow the list, and pinpoint the suspect(s).  
 
