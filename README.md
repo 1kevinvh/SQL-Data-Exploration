@@ -13,7 +13,7 @@ To do this, we explore some general queries that will give context clues. we wan
   
 For the first context clue, we come up with the SQL code:  
   
-![Input](1_1Code.jpg)
+![Input](WSDA_Images/1_1Code.png)
   
 This counts all data from the invoice table between the dates January 1, 2011, and December 31, 2012, including those dates. The count gives us an output of 167, meaning 167 transactions took place in that time period.  
 
