@@ -14,13 +14,13 @@ To do this, we explore some general queries that will give context clues. we wan
 For the first context clue, we come up with the SQL code:  
   
 **SELECT  
-	Count(*)  
+	- Count(*)  
 FROM  
-	Invoice  
+	- Invoice  
 WHERE  
-	InvoiceDate >= '2011-01-01'   
+	- InvoiceDate >= '2011-01-01'   
 AND  
-	InvoiceDate <= '2012-12-31'**  
+	- InvoiceDate <= '2012-12-31'**  
   
 This counts all data from the invoice table between the dates January 1, 2011, and December 31, 2012, including those dates. The count gives us an output of 167, meaning 167 transactions took place in that time period.  
 
