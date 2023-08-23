@@ -12,7 +12,7 @@ To do this, I explore some general queries that will give context clues. I want 
 **1. How many transactions took place between the years 2011 and 2012?  
 2. How much money did WSDA Music make during the same period?**  
   
-For the first context clue, I come up with the SQL code:  
+For the first context clue, I came up with the SQL code:  
   
 ![Input](WSDA_Images/1_1Code.png)
   
@@ -22,7 +22,7 @@ To determine the income between 2011 and 2012, I use the following code:
 
 ![Input](WSDA_Images/1_2Code.png)
 
-This code sums the total column from the invoice table and renames the column 'Total Income' for the income values between 2011 and 2012. After running the code, I find out the store made $1947.97 from transactions in that time.
+This code sums the total column from the invoice table and renames the column 'Total Income' for the income values between 2011 and 2012. After running the code, I found out the store made $1947.97 from transactions at that time.
 
 Now that I have general insight, I want to target the queries to data containing customers and employees. I then want to look for:
 
@@ -34,22 +34,21 @@ time period?
 4. What is the average transaction amount for each year that WSDA Music has been 
 in business?**  
 
-To get a list of customers, I come up with the code:
+To get a list of customers, I came up with the code:
 
 ![Input](WSDA_Images/2_1Code.png)
 
 This code selects the FirstName and LastName columns from the customer table and the total column from the Invoice table. It then joins the two tables with matching values from each table on the customerId column between 2011 and 2012 and sorts the new table from largest to smallest total transaction amount.
 
 
-To generate a list of customers, sales reps, and total transaction amounts for each customer 
-between 2011 and 2012, I alter the previous code slightly to get:
+To generate a list of customers, sales reps, and total transaction amounts for each customer between 2011 and 2012, I altered the previous code slightly to get:
 
 ![Input](WSDA_Images/2_2Code.png)
 
 This alteration joins the Employee table to the current table by the Customer table by the EmployeeId column and adds the columns CustomerId from the Customer table and the columns EmployeeId, FirstName, and LastName from the Employee table. This also adds names to each of the columns that explain more to the viewers of the table.
 
 To figure out how many transactions are above the average transaction amount during the same 
-time period, I need to use a function. To figure this out I use the following code:
+time period, I need to use a function. To figure this out I used the following code:
 
 ![Input](WSDA_Images/2_3Code.png)
 
@@ -62,7 +61,7 @@ After adding the outer query I get the code:
 
 ![Input](WSDA_Images/2_3_2Code.png)
 
-This code counts the total number of transactions where the total is above the average transaction amount, which I used as our subquery, between 2011 and 2012. I then find out the number of transactions above the average amount is 26.
+This code counts the total number of transactions where the total is above the average transaction amount, which I used as our subquery, between 2011 and 2012. I then found out the number of transactions above the average amount is 26.
 
 
 I now want to compare the average transactions for the years to other years, in this case, every year the hypothetical business has been open, to see if it looks suspicious. I do this with the code:
@@ -96,11 +95,11 @@ I can alter the previous code to add a column to show the employees' 15% commiss
 
 The only difference in this code is the line **round(sum(i.total)*.15,2) AS \[Commisssion\]**. Adding this line to the select clause multiplies the total sum of the employee's transactions by 15% and rounds the total to 2 decimal places. 
 
-The output shows Jane Peacock has a significantly higher commission. This raises suspicion, so I should look closer into the employee. The next step is to look into the list of customers that the employee helped, so I create the code:
+The output shows Jane Peacock has a significantly higher commission. This raises suspicion, so I should look closer into the employee. The next step is to look into the list of customers that the employee helped, so I created the code:
 
 ![Input](WSDA_Images/3_4Code.png)
 
-This code adds the customer's first and last name that Jane helped ad orders the data from highest to lowest in total sales.
+This code adds the customer's first and last name that Jane helped and orders the data from highest to lowest in total sales.
 
 The output shows John Doeein looks suspicious because the sales and commission are significant compared to the other customers. So I want to look into the customer to check their records. To do this I use the code:  
 
