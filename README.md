@@ -1,4 +1,4 @@
-# HoK_Data_Exploration
+# Intro
 
 This is a project I worked on to practice my SQL skills. I downloaded the database from the internet and imported it into SQL. The project and database are located in the projects folder of my SQL repository. The database I use is SQLite. To open the file, download the SQL file from the projects folder, open your SQL database, and open the file in that software. I have notes in the projects where my thought processes are, and I have all of the code except the last code I ran commented out. To run the code, highlight the code and hit the run SQL code button, or comment out the currently active code using /* at the beginning of the code and */ at the end of the code. Remove the same symbols from the beginning and end of the code you want to run.
 
